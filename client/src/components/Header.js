@@ -35,7 +35,7 @@ class Header extends Component {
                 <div className="col-md-8 text-left">
                     <h1 className="text-success"><img style={{height : 70}} src="/images/logo/logo.png" atl="" /> เฮลตี้ คาเฟ่ </h1>
                 </div>
-                <div className="col-md-4 text-right">
+                <div className="col-md-4 text-end">
                     <h5 className="text-muted mt-4"> {this.state.date.toLocaleTimeString()} </h5>
                 </div>
                 <hr />

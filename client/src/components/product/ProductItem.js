@@ -11,10 +11,11 @@ class ProductItem extends Component {
             <div className="col-md-3 col-sm-6">
                 <img className="img-fluid img-thumbnail" src={thumbnail} />
                 <h5 className="mt-2"> {productName} </h5>
-                <p className="text-right">{unitPrice} THB</p>
-                <button className="btn btn-block btn-secondary">
-                    ซื้อ
-                </button>
+                <p className="text-end">{unitPrice} THB</p>
+
+                <div class="d-grid">
+                    <button class="btn btn-secondary" type="button">ซื้อ</button>
+                </div>
                 <hr />
             </div>
         )
