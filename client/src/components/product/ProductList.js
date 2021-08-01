@@ -7,7 +7,7 @@ class ProductList extends Component {
     showProducts() {
         return  this.props.products && this.props.products.map(product => (
             // <ProductItem productName={product.productName} unitPrice={product.unitPrice} /> refactor
-            <ProductItem key={product.productId} {...product} />
+            <ProductItem key={product.productId} product={product} onAddOrder={this.props.onAddOrder} />
         ))
     }
 
