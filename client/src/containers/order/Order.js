@@ -69,7 +69,7 @@ class Order extends Component {
           <h1>รายการสั่งซื้อ</h1>
           <div className="row">{this.showOrders()}</div>
         </div>
-        <Footer />
+        <Footer company="KBTG" email="jirawan.c@kbtg.tech" />
       </div>
     );
   }

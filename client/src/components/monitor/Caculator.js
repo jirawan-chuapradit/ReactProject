@@ -9,7 +9,7 @@ class Calculator extends Component {
         return (
           <li
             className="text-end text-success  title"
-            key={order.product.productId}
+            key={order.product.id}
           >
             {order.product.productName} x {order.quantity} ={" "}
             {order.product.unitPrice * order.quantity}
