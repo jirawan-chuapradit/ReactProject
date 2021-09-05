@@ -1,13 +1,8 @@
-import ReactDOM from 'react-dom';
-import App from './App'
-import 'bootstrap/dist/css/bootstrap.min.css'
-// function Welcome() {
-//   return  <h1>Welcome to React world</h1>
-// }
+import ReactDOM from "react-dom";
+import App from "./App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 
-ReactDOM.render(
- <App/>,
-  document.getElementById('root')
-);
-
-
+const store = createStore()
+ReactDOM.render(<App />, document.getElementById("root"));

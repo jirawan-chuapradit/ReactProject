@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ProductList from "../../components/product/ProductList";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
 
 class Product extends Component {
@@ -9,6 +10,7 @@ class Product extends Component {
     super(props);
     this.state = { products: null };
     this.delProduct = this.delProduct.bind(this);
+    this.editProduct = this.editProduct.bind(this);
   }
 
   componentDidMount() {
@@ -17,14 +19,16 @@ class Product extends Component {
     });
   }
 
+  editProduct(product) {
+    this.props.history.push("product/edit/" + product.id);
+  }
+
   delProduct(product) {
-    axios
-      .delete("http://localhost:3001/products/" + product.id)
-      .then((res) => {
-        axios.get("http://localhost:3001/products").then((res) => {
-          this.setState({ products: res.data });
-        });
+    axios.delete("http://localhost:3001/products/" + product.id).then((res) => {
+      axios.get("http://localhost:3001/products").then((res) => {
+        this.setState({ products: res.data });
       });
+    });
   }
   render() {
     return (
@@ -36,12 +40,18 @@ class Product extends Component {
               <h1>สินค้า</h1>
             </div>
             <div className="col-6">
-              <button className="btn btn-success float-end">เพิ่ม</button>
+              <button
+                className="btn btn-success float-end"
+                onClick={() => this.props.history.push("products/add")}
+              >
+                เพิ่ม
+              </button>
             </div>
           </div>
           <ProductList
             products={this.state.products}
             onDelProduct={this.delProduct}
+            onEditProduct={this.editProduct}
           />
         </div>
         <Footer company="KBTG" email="jirawan.c@kbtg.tech" />
@@ -50,4 +60,4 @@ class Product extends Component {
   }
 }
 
-export default Product;
+export default withRouter(Product);

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { JSEncrypt } from "jsencrypt";
 
 class Header extends Component {
   constructor(props) {
@@ -26,6 +27,14 @@ class Header extends Component {
 
   tick() {
     this.setState({ date: new Date() });
+  }
+
+  test() {
+    let str = "i will be encrypto";
+    let encrypt = new JSEncrypt.JSEncrypt(); // instantiate encrypted objects
+    encrypt.setPublicKey("public_key.pem"); //Set public key
+    let encryptoPasswd = encrypt.encrypt(str); // encrypted plaintext
+    console.log(encryptoPasswd);
   }
 
   render() {
@@ -65,6 +74,12 @@ class Header extends Component {
               <li className="list-inline-item">
                 <Link to="/about" className="text-success">
                   เกี่ยวกับเรา
+                </Link>
+              </li>
+              <li className="list-inline-item">|</li>
+              <li className="list-inline-item">
+                <Link className="text-success" onClick={this.test()}>
+                  test
                 </Link>
               </li>
             </ul>
