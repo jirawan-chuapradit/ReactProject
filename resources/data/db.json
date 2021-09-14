@@ -7,12 +7,6 @@
       "thumbnail": "/images/product/1.jpg"
     },
     {
-      "id": 3,
-      "productName": "บิงซู",
-      "unitPrice": "200",
-      "thumbnail": "/images/product/3.jpg"
-    },
-    {
       "id": 4,
       "productName": "เฟรนฟราย",
       "unitPrice": "140",
@@ -99,6 +93,22 @@
         }
       ],
       "id": 2
+    },
+    {
+      "orderDate": "2021-09-11T10:36:24.303Z",
+      "totalPrice": 200,
+      "orders": [
+        {
+          "product": {
+            "id": 5,
+            "productName": "เค้ก 3 ชั้น",
+            "unitPrice": "200",
+            "thumbnail": "/images/product/5.jpg"
+          },
+          "quantity": 1
+        }
+      ],
+      "id": 3
     }
   ]
 }

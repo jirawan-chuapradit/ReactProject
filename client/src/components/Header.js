@@ -29,14 +29,6 @@ class Header extends Component {
     this.setState({ date: new Date() });
   }
 
-  test() {
-    let str = "i will be encrypto";
-    let encrypt = new JSEncrypt.JSEncrypt(); // instantiate encrypted objects
-    encrypt.setPublicKey("public_key.pem"); //Set public key
-    let encryptoPasswd = encrypt.encrypt(str); // encrypted plaintext
-    console.log(encryptoPasswd);
-  }
-
   render() {
     return (
       <div className="container-fluid">
@@ -77,11 +69,6 @@ class Header extends Component {
                 </Link>
               </li>
               <li className="list-inline-item">|</li>
-              <li className="list-inline-item">
-                <Link className="text-success" onClick={this.test()}>
-                  test
-                </Link>
-              </li>
             </ul>
           </div>
           <hr />
