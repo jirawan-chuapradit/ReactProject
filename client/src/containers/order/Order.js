@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { ordersFetch, orderDelete } from "../../actions";
 
 class Order extends Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props);
   }

@@ -2,15 +2,12 @@ import React, { Component } from "react";
 
 class Calculator extends Component {
   showOrder(orders) {
-    if (!orders || orders.length == 0) {
+    if (!orders || orders.length === 0) {
       return <li className="text-end text-muted"> ไม่มีสินค้า </li>;
     } else {
       return orders.map((order) => {
         return (
-          <li
-            className="text-end text-success  title"
-            key={order.product.id}
-          >
+          <li className="text-end text-success  title" key={order.product.id}>
             {order.product.productName} x {order.quantity} ={" "}
             {order.product.unitPrice * order.quantity}
             <button
@@ -34,7 +31,10 @@ class Calculator extends Component {
         <ul className="list-unstyled">{this.showOrder(orders)}</ul>
         <hr />
         <div className="d-grid gap-2">
-          <button className="btn btn-danger" onClick={() => this.props.onConfirmOrder()} >
+          <button
+            className="btn btn-danger"
+            onClick={() => this.props.onConfirmOrder()}
+          >
             ยืนยัน
           </button>
           <button

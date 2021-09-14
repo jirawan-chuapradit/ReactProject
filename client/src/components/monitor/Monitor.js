@@ -22,6 +22,7 @@ class Monitor extends Component {
     } else {
       this.state.orders.push({ product: product, quantity: 1 });
     }
+    // eslint-disable-next-line
     const totalPrice = this.state.totalPrice + parseInt(product.unitPrice);
     this.setState({
       totalPrice: totalPrice,
@@ -34,6 +35,7 @@ class Monitor extends Component {
     let findOrder = this.state.orders.find(
       (order) => order.product.id === product.id
     );
+
     let resultOrders = this.state.orders.filter(
       (order) => order.product.id !== product.id
     );

@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { productsFetch } from "../actions";
 
 class Home extends Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props);
   }
@@ -25,7 +26,6 @@ class Home extends Component {
 }
 
 function mapStateToProps({ products }) {
-  console.log(products);
   return { products };
 }
 export default connect(mapStateToProps, { productsFetch })(Home);
