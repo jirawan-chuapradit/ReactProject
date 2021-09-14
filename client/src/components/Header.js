@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
@@ -29,7 +30,6 @@ class Header extends Component {
   }
 
   render() {
-    // eslint-disable-next-line
     return (
       <div className="container-fluid">
         <div className="row">

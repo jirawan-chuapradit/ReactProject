@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from "react";
 import Calculator from "./Caculator";
 import ProductList from "../product/ProductList";
@@ -22,7 +23,6 @@ class Monitor extends Component {
     } else {
       this.state.orders.push({ product: product, quantity: 1 });
     }
-    // eslint-disable-next-line
     const totalPrice = this.state.totalPrice + parseInt(product.unitPrice);
     this.setState({
       totalPrice: totalPrice,
