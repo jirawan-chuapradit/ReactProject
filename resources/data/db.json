@@ -7,9 +7,21 @@
       "thumbnail": "/images/product/1.jpg"
     },
     {
+      "id": 2,
+      "productName": "ไก่ทอด",
+      "unitPrice": "90",
+      "thumbnail": "/images/product/2.jpg"
+    },
+    {
+      "id": 3,
+      "productName": "บิงซู",
+      "unitPrice": "250",
+      "thumbnail": "/images/product/3.jpg"
+    },
+    {
       "id": 4,
       "productName": "เฟรนฟราย",
-      "unitPrice": "140",
+      "unitPrice": "12",
       "thumbnail": "/images/product/4.jpg"
     },
     {
@@ -25,90 +37,5 @@
       "thumbnail": "/images/product/6.jpg"
     }
   ],
-  "orders": [
-    {
-      "orderDate": "2021-08-12T09:07:16.733Z",
-      "totalPrice": 430,
-      "orders": [
-        {
-          "product": {
-            "id": 3,
-            "productName": "บิงซู",
-            "unitPrice": "200",
-            "thumbnail": "/images/product/3.jpg"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "id": 4,
-            "productName": "เฟรนฟราย",
-            "unitPrice": "140",
-            "thumbnail": "/images/product/4.jpg"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "id": 2,
-            "productName": "ไก่ทอด",
-            "unitPrice": "90",
-            "thumbnail": "/images/product/2.jpg"
-          },
-          "quantity": 1
-        }
-      ],
-      "id": 1
-    },
-    {
-      "orderDate": "2021-08-14T18:31:59.062Z",
-      "totalPrice": 430,
-      "orders": [
-        {
-          "product": {
-            "id": 4,
-            "productName": "เฟรนฟราย",
-            "unitPrice": "140",
-            "thumbnail": "/images/product/4.jpg"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "id": 3,
-            "productName": "บิงซู",
-            "unitPrice": "200",
-            "thumbnail": "/images/product/3.jpg"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "id": 2,
-            "productName": "ไก่ทอด",
-            "unitPrice": "90",
-            "thumbnail": "/images/product/2.jpg"
-          },
-          "quantity": 1
-        }
-      ],
-      "id": 2
-    },
-    {
-      "orderDate": "2021-09-11T10:36:24.303Z",
-      "totalPrice": 200,
-      "orders": [
-        {
-          "product": {
-            "id": 5,
-            "productName": "เค้ก 3 ชั้น",
-            "unitPrice": "200",
-            "thumbnail": "/images/product/5.jpg"
-          },
-          "quantity": 1
-        }
-      ],
-      "id": 3
-    }
-  ]
+  "orders": []
 }

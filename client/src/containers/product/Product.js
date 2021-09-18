@@ -18,7 +18,7 @@ class Product extends Component {
   }
 
   editProduct(product) {
-    this.props.history.push("product/edit/" + product.id);
+    this.props.history.push("products/edit/" + product.id);
   }
 
   delProduct(product) {
@@ -43,11 +43,14 @@ class Product extends Component {
               </button>
             </div>
           </div>
-          <ProductList
-            products={this.props.products}
-            onDelProduct={this.delProduct}
-            onEditProduct={this.editProduct}
-          />
+
+          {this.props.products && Array.isArray(this.props.products) && (
+            <ProductList
+              products={this.props.products}
+              onDelProduct={this.delProduct}
+              onEditProduct={this.editProduct}
+            />
+          )}
         </div>
         <Footer company="KBTG" email="jirawan.c@kbtg.tech" />
       </div>
