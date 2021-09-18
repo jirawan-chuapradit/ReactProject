@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ input, label, type, required }) => {
+export default ({ input, label, type, required, meta: { error, touched } }) => {
   return (
     <div className="form-group">
       <label>{label}</label>
@@ -10,6 +10,7 @@ export default ({ input, label, type, required }) => {
         {...input}
         className="form-control"
       />
+      {error && touched && <div className="text-danger mt-2">{error}</div>}
     </div>
   );
 };
