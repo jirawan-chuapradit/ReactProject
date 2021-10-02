@@ -14,7 +14,7 @@ class Detail extends Component {
     return (
       <Layout>
         <div className="container">
-          <h1 className="mt-4 mb-4">{blog.subject}</h1>
+          <h1 className="mt-4 mb-4 title"> {blog.subject}</h1>
           <div className="row">
             <div className="col-6">
               <img className="img-fluid" src={blog.thumbnail} />
@@ -33,6 +33,18 @@ class Detail extends Component {
             </div>
           </div>
         </div>
+        <style jsx>
+          {`
+            .title {
+              color: darkgreen;
+              text-align: center;
+            }
+            .detail {
+              color: black;
+              word-spacing: 8px;
+            }
+          `}
+        </style>
       </Layout>
     );
   }
