@@ -7,7 +7,7 @@ export const ordersFetch = () => {
   // .then จะทำงานเป็น async เมื่อได้รับข้อมูลจาก server ถึงจะทำงาน
 
   return (dispatch) => {
-    axios.get("http://localhost:3001/orders").then((res) => {
+    axios.get(process.env.REACT_APP_APT_URL + "/orders").then((res) => {
       dispatch({ type: ORDERS_FETCH, payload: res.data });
     });
   };
@@ -15,10 +15,12 @@ export const ordersFetch = () => {
 
 export const orderDelete = (id) => {
   return (dispatch) => {
-    axios.delete("http://localhost:3001/orders/" + id).then((res) => {
-      axios.get("http://localhost:3001/orders").then((res) => {
-        dispatch({ type: ORDERS_FETCH, payload: res.data });
+    axios
+      .delete(process.env.REACT_APP_APT_URL + "/orders/" + id)
+      .then((res) => {
+        axios.get(process.env.REACT_APP_APT_URL + "/orders").then((res) => {
+          dispatch({ type: ORDERS_FETCH, payload: res.data });
+        });
       });
-    });
   };
 };

@@ -15,6 +15,10 @@ class Home extends Component {
   }
 
   render() {
+    console.log(
+      "process.env.REACT_APP_APT_URL: ",
+      process.env.REACT_APP_APT_URL
+    );
     return (
       <div>
         <Header />
